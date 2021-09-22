@@ -9,18 +9,13 @@ body {
 }
 
 .navbar,
-.hero {
+.hero,
+footer {
   background-color: #1f2937;
 }
 
-header,
-.hero {
-  padding: 20px;
-  padding-bottom: 70px;
-}
-
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -30,8 +25,24 @@ header,
   justify-content: space-between;
 }
 
+.hero,
+.information,
+.quote,
+.action {
+  margin-bottom: 32px;
+}
+
+nav {
+  align-self: flex-end;
+}
+
+.navbar {
+  padding-top: 16px;
+}
+
 .hero .flex {
-  gap: 32px;
+  gap: 58px;
+  padding: 64px 0;
 }
 
 .left {
@@ -40,29 +51,80 @@ header,
   flex-shrink: 4;
 }
 
-.container .right {
-  background-color: rgb(131, 131, 131);
-  height: 300px;
-  width: 700px;
+.right {
+  width: 55%;
   flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.hero {
-  padding-bottom: 70px;
+.right img {
+  width: 100%;
 }
 
-/* BUTTONS */
+.image-container {
+  align-items: flex-start;
+  gap: 64px;
+  padding: 0 80px;
+}
+
+.images {
+  max-width: 150px;
+  text-align: center;
+}
+
+.images img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.quote {
+  background-color: #e5e7eb;
+  padding: 64px 0;
+}
+
+.quote .flex {
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 80px;
+}
+
+.author {
+  align-self: flex-end;
+}
+
+.action {
+  padding: 32px 0;
+}
+
+.action .container {
+  background-color: #3882f6;
+  border-radius: 5px;
+  padding: 32px 80px;
+  width: 100%;
+}
+
+footer .flex {
+  justify-content: center;
+}
+footer {
+  padding: 32px 0;
+}
+
+/* BUTTON STYLE */
 
 button {
   align-self: flex-start;
   background-color: #3882f6;
   border: none;
   border-radius: 5px;
-  color: #e5e7eb;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 8px 28px;
   margin-top: 8px;
+  padding: 8px 16px;
+}
+
+.action button {
+  border: 2px solid #e5e7eb;
 }
 
 /* LINKS */
@@ -77,21 +139,66 @@ a {
   text-decoration: none;
 }
 
-/* Font styles*/
+/* FONT STYLES */
 
 header h1 {
   color: #f9faf8;
   font-size: 24px;
 }
 
+a {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
 .hero h2 {
   font-size: 48px;
   font-weight: 900;
   color: #f9faf8;
+  margin-bottom: 8px;
 }
 
-.hero p,
-a {
+.hero p {
   color: #e5e7eb;
   font-size: 18px;
+  margin-bottom: 8px;
+}
+
+button {
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.information h2 {
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.text {
+  color: #1f2937;
+  font-size: 36px;
+  font-style: italic;
+}
+
+.author {
+  font-weight: 700;
+}
+
+h3 {
+  color: #e5e7eb;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.action p {
+  color: #e5e7eb;
+  font-size: 16px;
+}
+
+footer {
+  color: #e5e7eb;
+  font-size: 16px;
 }
