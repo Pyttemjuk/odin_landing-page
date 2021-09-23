@@ -14,6 +14,16 @@ footer {
   background-color: #1f2937;
 }
 
+.quote {
+  background-color: #e5e7eb;
+}
+
+.action .container {
+  background-color: #3882f6;
+}
+
+/* FLEX LAYOUT */
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -25,15 +35,53 @@ footer {
   justify-content: space-between;
 }
 
+nav {
+  align-self: flex-end;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero .left {
+  flex-shrink: 4;
+}
+
+.hero .right {
+  flex-shrink: 1;
+}
+
+.image-container {
+  align-items: flex-start;
+}
+
+.quote .flex {
+  flex-direction: column;
+}
+
+.author {
+  align-self: flex-end;
+}
+
+footer .flex {
+  justify-content: center;
+}
+
+/* PADDING AND MARGIN */
+
 .hero,
 .information,
 .quote,
 .action {
   margin-bottom: 32px;
-}
-
-nav {
-  align-self: flex-end;
 }
 
 .navbar {
@@ -45,28 +93,38 @@ nav {
   padding: 64px 0;
 }
 
-.left {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 4;
+.image-container {
+  gap: 64px;
+  padding: 0 80px;
 }
 
-.right {
-  width: 55%;
-  flex-shrink: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.quote {
+  padding: 64px 0;
 }
 
-.right img {
+.quote .flex {
+  gap: 16px;
+  padding: 0 80px;
+}
+
+.action {
+  padding: 32px 0;
+}
+
+.action .container {
+  border-radius: 5px;
+  padding: 32px 80px;
   width: 100%;
 }
 
-.image-container {
-  align-items: flex-start;
-  gap: 64px;
-  padding: 0 80px;
+footer {
+  padding: 32px 0;
+}
+
+/* IMAGES */
+
+img {
+  width: 100%;
 }
 
 .images {
@@ -75,41 +133,7 @@ nav {
 }
 
 .images img {
-  width: 100%;
   margin-bottom: 8px;
-}
-
-.quote {
-  background-color: #e5e7eb;
-  padding: 64px 0;
-}
-
-.quote .flex {
-  flex-direction: column;
-  gap: 16px;
-  padding: 0 80px;
-}
-
-.author {
-  align-self: flex-end;
-}
-
-.action {
-  padding: 32px 0;
-}
-
-.action .container {
-  background-color: #3882f6;
-  border-radius: 5px;
-  padding: 32px 80px;
-  width: 100%;
-}
-
-footer .flex {
-  justify-content: center;
-}
-footer {
-  padding: 32px 0;
 }
 
 /* BUTTON STYLE */
@@ -129,7 +153,7 @@ button {
 
 /* LINKS */
 
-nav ul {
+ul {
   display: flex;
   gap: 32px;
   list-style: none;
@@ -141,7 +165,7 @@ a {
 
 /* FONT STYLES */
 
-header h1 {
+h1 {
   color: #f9faf8;
   font-size: 24px;
 }
